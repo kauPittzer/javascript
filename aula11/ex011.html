@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubra o SEU PAÍS!</h1>
+
+    <input type="text" name="naci" id="inaci" placeholder="Digite seu país">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var res = window.document.getElementById('res')
+            var n1 = window.document.querySelector('input#inaci')
+            var nacionalidade = String(n1.value)
+
+            if(nacionalidade === 'Brasil') {
+                res.innerHTML = `Você mora em ${nacionalidade}, portando você é Brasileiro.`
+            } else {
+                res.innerHTML = `Você mora em ${nacionalidade}, portanto você é Estrangeiro.`
+            }
+        }
+    </script>
+</body>
+</html>

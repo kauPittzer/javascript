@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: lightslategray;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        body h1 {
+            margin-top: 15px;
+            margin-bottom: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 2.3em;
+            
+            color: black;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.158);
+            background-color: yellow;
+        }
+        body p {
+            display: inline;
+            margin-left: 15px;
+            font-size: 20pt;
+
+            text-shadow: 1px 1px black;
+        }
+        p#km {
+            margin-left:  0px;
+        }
+
+        input[type='number'] {
+            position: relative;
+            bottom: 3px;
+
+            margin: 10px;
+            width: 100px;
+            height: 30px;
+        }
+        input[type='button'] {
+            position: relative;
+            bottom: 3px;
+            padding: 3px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        div {
+            font-size: 1.2em;
+            margin: 15px 0px 0px 20px;
+
+            text-shadow: 1px 1px 1px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <p>Velocidade do Carro:</p><input type="number" name="vel" id="ivel" placeholder="Velocidade"><p id="km">Km/h</p>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resultado"></div>
+    <script>
+        function calcular() {
+            var result = window.document.querySelector('div#resultado')
+            var velmax = window.document.getElementById('ivel').innerText
+            var vel = Number(ivel.value)
+            
+            if(vel > 60) {
+            result.innerText = 'Você será multado.'
+        } else {
+            result.innerText = 'Você não será multado.'
+        }
+
+        }
+    </script>
+</body>
+</html>
