@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Que Horas São?</title>
+    <title>Verifique a Idade</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -14,9 +14,9 @@
         <section>
             <div id="form">
                 <label for="iano">Ano de nascimento: </label>
-                <input type="number" name="ano" id="iano"> <br>
+                <input type="number" name="ano" id="iano" min="0"> <br>
 
-                Sexo: <input type="radio" name="sexo" id="sexoM"> <label for="sexoM">Masculino</label>
+                Sexo: <input type="radio" name="sexo" id="sexoM" checked> <label for="sexoM">Masculino</label>
                 <input type="radio" name="sexo" id="sexoF"> <label for="sexoF">Feminino</label> <br>
 
                 <input type="submit" value="Verificar" onclick="verificar()">
