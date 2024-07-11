@@ -31,6 +31,10 @@ section {
     margin: auto;
 }
 
+p {
+    margin: 10px;
+}
+
 footer {
     margin-top: 10px;
     text-align: center;
