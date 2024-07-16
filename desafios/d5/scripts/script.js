@@ -44,6 +44,7 @@ function final() {
         let menor = valores[0]
         let soma = 0
         let media = 0
+
         for(let pos in valores) {
             soma += valores[pos]
             media = soma/total
@@ -52,7 +53,6 @@ function final() {
             if ( valores[pos] < menor) 
                 menor = valores[pos]
         } 
-
         res.innerHTML = ''
         res.innerHTML += `<p>Ao todo, Temos ${total} números cadastrados.</p>`
         res.innerHTML += `<p>O menor valor encontrado foi ${menor}.</p>`
